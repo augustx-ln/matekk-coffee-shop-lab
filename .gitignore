@@ -1,0 +1,25 @@
+﻿# Local development and generated files
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# Local state and uploads (database is recreated and seeded at startup)
+data/
+
+# Secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

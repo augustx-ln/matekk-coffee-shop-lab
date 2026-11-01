@@ -1,0 +1,7 @@
+MATEKK - SAMPLE SUPPLIER AGREEMENT
+FICTIONAL TRAINING DOCUMENT - NO LEGAL EFFECT
+Supplier: Northstar Bean Cooperative (fictional)
+Contact: contracts@example.test
+Term: 01 Jan 2026 - 31 Dec 2026
+Indicative simulated price: PHP 680/kg
+Confidentiality: pricing and sourcing notes are intended for internal staff.

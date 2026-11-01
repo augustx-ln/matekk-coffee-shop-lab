@@ -1,0 +1,4 @@
+INTERNAL ADMIN NOTES - LAB ONLY
+Demo admin: Sally (the current demo password is intentionally weak; see README).
+Customer record exercise: authenticate, then compare /api/customers/1001/private-records and /api/customers/1002/private-records.
+Do not use real customer information. All document records are synthetic.

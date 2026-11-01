@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /backup/
+Disallow: /api/admin/
+Disallow: /documents/owner-financial-records.txt
+# Legacy staff portal: /staff/archive
+# Development API reference: /docs

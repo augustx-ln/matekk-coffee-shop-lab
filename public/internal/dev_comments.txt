@@ -1,0 +1,5 @@
+Developer migration notes:
+- Old staff archive route retained for web enumeration exercises.
+- API documentation remains enabled for the lab.
+- Static training documents are intentionally exposed.
+- Do not deploy this environment outside localhost.

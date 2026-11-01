@@ -1,0 +1,6 @@
+INTERNAL OPERATIONS MEMO - LAB DATA
+1. New seasonal menu preview planned for the next training cycle.
+2. Staff portal legacy route: /staff/archive
+3. The old reporting export was copied to /backup/ for migration testing.
+4. API schema is available at /openapi.json.
+No real business operations or customer information are represented.

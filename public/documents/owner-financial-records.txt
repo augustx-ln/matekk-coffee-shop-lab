@@ -1,0 +1,9 @@
+MATEKK COFFEE HOUSE - OWNER FINANCIAL SUMMARY
+SYNTHETIC TRAINING DATA - NOT A REAL PERSON OR BANK ACCOUNT
+Owner: Elena Marquez (fictional)
+Institution: Example Community Bank (fictional)
+Account number: 000000000000 (invalid placeholder; not a bank account)
+Routing/reference: LAB-ONLY-0000
+Monthly revenue: PHP 482,500 (simulated)
+Supplier liabilities: PHP 83,200 (simulated)
+Never use these values for a real transaction.

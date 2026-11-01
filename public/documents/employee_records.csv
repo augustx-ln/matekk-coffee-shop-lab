@@ -1,0 +1,5 @@
+LAB DATA ONLY - FICTIONAL STAFF
+staff_id,name,email,role,shift
+EMP-001,Lea Navarro,lea@example.test,Barista,07:00-15:00
+EMP-002,Marco Dizon,marco@example.test,Shift Lead,12:00-20:00
+EMP-003,Iris Lim,iris@example.test,Operations,09:00-17:00

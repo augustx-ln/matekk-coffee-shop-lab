@@ -1,0 +1,4 @@
+MATEKK LEGACY SITE BACKUP - SYNTHETIC TRAINING CONTENT
+Legacy staff portal: /staff/archive
+Legacy export location: /backup/database_backup.sql
+Legacy API reference: /docs

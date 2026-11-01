@@ -1,0 +1,6 @@
+{
+  "classification": "SYNTHETIC LAB DATA",
+  "service": "Matekk Coffee Shop API",
+  "sample_routes": ["/api/health", "/api/reviews", "/api/customers/{customer_id}/private-records", "/api/admin/summary"],
+  "note": "Training-only route inventory. All sample records are fictional."
+}
