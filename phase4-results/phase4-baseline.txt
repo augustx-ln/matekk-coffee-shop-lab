@@ -1,0 +1,26 @@
+MATEKK COFFEE SHOP — PHASE 4 PRE-ATTACK BASELINE
+Timestamp: 2026-11-01T11:47:05.945138+08:00
+Target: http://127.0.0.1:8000
+Scope: local lab only; baseline and static review; no state-changing requests.
+ANONYMOUS GET /api/health: status=200; body_bytes=49; sample='{"ok":true,"app":"Matekk Coffee Shop","lab":true}'
+ANONYMOUS GET /: status=200; body_bytes=618; sample='<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="theme-color" content="#241b15"/><title>Matekk Coffee Shop</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">  <script type="module" crossorigin src="/assets/index-DvIWlEz7.js"></script>\n  '
+ANONYMOUS GET /api/me: status=401; body_bytes=27; sample='{"detail":"Please sign in"}'
+ANONYMOUS GET /api/admin/summary: status=401; body_bytes=27; sample='{"detail":"Please sign in"}'
+ANONYMOUS GET /api/admin/users: status=401; body_bytes=27; sample='{"detail":"Please sign in"}'
+ANONYMOUS GET /api/customers/1001/private-records: status=401; body_bytes=27; sample='{"detail":"Please sign in"}'
+ANONYMOUS GET /api/customers/1002/private-records: status=401; body_bytes=27; sample='{"detail":"Please sign in"}'
+ANONYMOUS GET /api/customers/1003/private-records: status=401; body_bytes=27; sample='{"detail":"Please sign in"}'
+ANONYMOUS GET /documents/: status=200; body_bytes=881; sample='<!doctype html><html><head><title>/documents/</title></head><body><h1>Index of /documents/</h1><ul><li><a href="api_schema.json">api_schema.json</a> <small>283 bytes</small></li><li><a href="customer_accounts.csv">customer_accounts.csv</a> <small>274 bytes</small></li><li><a href="customer_payment_records.csv">customer_payment_records.csv</a> <small>377 bytes</small></li><li><a href="employee_records.csv">employee_records.csv</a> <small>239 bytes</small></li><li><a href="internal-memos.txt">inte'
+ANONYMOUS GET /backup/: status=200; body_bytes=402; sample='<!doctype html><html><head><title>/backup/</title></head><body><h1>Index of /backup/</h1><ul><li><a href="config_backup.env">config_backup.env</a> <small>248 bytes</small></li><li><a href="database_backup.sql">database_backup.sql</a> <small>617 bytes</small></li><li><a href="old_site_backup.txt">old_site_backup.txt</a> <small>170 bytes</small></li></ul><p>Matekk local training lab.</p></body></html>'
+ANONYMOUS GET /internal/: status=200; body_bytes=309; sample='<!doctype html><html><head><title>/internal/</title></head><body><h1>Index of /internal/</h1><ul><li><a href="admin_notes.txt">admin_notes.txt</a> <small>316 bytes</small></li><li><a href="dev_comments.txt">dev_comments.txt</a> <small>248 bytes</small></li></ul><p>Matekk local training lab.</p></body></html>'
+STATIC SOURCE MARKERS: {"admin_role_guard": false, "current_user_dependency": true, "customer_ownership_comparison": false, "customer_private_records_route": true, "upload_mime_allowlist": true, "upload_signature_validation": false, "upload_size_limit": true}
+DATABASE integrity_check: ok
+DATABASE row_counts: {"customer_private_records": 3, "reviews": 2, "users": 2}
+PHASE 4 TEST QUEUE:
+1. Authenticated customer IDOR: compare own record access with other customer IDs; record status and returned record identity.
+2. Customer-to-admin authorization: request admin-only endpoints with customer session; expect denial.
+3. Admin authorization: verify admin endpoints succeed only with admin session.
+4. Upload validation: controlled harmless test files only; verify MIME and signature handling without executable content.
+5. Session behavior: inspect cookie flags, logout invalidation, and session reuse.
+6. Dependency applicability: verify installed vulnerable code paths before any controlled resilience test.
+NO authenticated attack requests or upload submissions were performed in this baseline.

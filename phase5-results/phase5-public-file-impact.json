@@ -1,0 +1,223 @@
+[
+  {
+    "path": "/documents/api_schema.json",
+    "category": "schema",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes": 283,
+    "sha256": "d54364f76d442fc108dd91f456c6c294bc29799c494a424ded9c3e366e7b48e3",
+    "line_count": 6,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": false,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": true,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/documents/customer_accounts.csv",
+    "category": "customer_account_export",
+    "status": 200,
+    "content_type": "text/csv; charset=utf-8",
+    "bytes": 274,
+    "sha256": "8199c6a31c9ebdea0d2f3aa45306030bb52bc5e919c34fc6d6e9874ca2cc8e9e",
+    "line_count": 5,
+    "indicators": {
+      "email_addresses": true,
+      "phone_numbers": true,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": true,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/documents/customer_payment_records.csv",
+    "category": "payment_record_export",
+    "status": 200,
+    "content_type": "text/csv; charset=utf-8",
+    "bytes": 377,
+    "sha256": "1515e8e016b5fa39ce46999f9f1b04e6998c0a514fa2aef0a69905fb25096203",
+    "line_count": 5,
+    "indicators": {
+      "email_addresses": true,
+      "phone_numbers": false,
+      "credential_markers": false,
+      "financial_markers": true,
+      "personal_data_markers": true,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/documents/employee_records.csv",
+    "category": "employee_record_export",
+    "status": 200,
+    "content_type": "text/csv; charset=utf-8",
+    "bytes": 239,
+    "sha256": "f3a6cbcb32b89921372aa47bfeef95a5e892921c93ff63d217dab111c4f98908",
+    "line_count": 5,
+    "indicators": {
+      "email_addresses": true,
+      "phone_numbers": false,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": true,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/documents/internal-memos.txt",
+    "category": "internal_memos",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 334,
+    "sha256": "5f2f77b25cebc2069091d6e23cdab66199537050b74c4cfcaf5f3d145585ac03",
+    "line_count": 6,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": false,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": true,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/documents/owner-financial-records.txt",
+    "category": "owner_financial_records",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 423,
+    "sha256": "252a5f0044907a6bf5fa7eb8ba5048603bdb92625cc7f25f75b22d991c5e0170",
+    "line_count": 9,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": true,
+      "credential_markers": false,
+      "financial_markers": true,
+      "personal_data_markers": false,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/documents/secret-recipes.txt",
+    "category": "proprietary_recipes",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 395,
+    "sha256": "eaaf83db352d7fcb047f42692c7690f68c3c9458a1b9a9eaa56d08a7b587e82f",
+    "line_count": 6,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": false,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": false,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/documents/supplier-contracts.txt",
+    "category": "supplier_contracts",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 309,
+    "sha256": "18c069d36cb54dffb5a3d137547d9066c33e628143c51adfd7923272f0d5cf35",
+    "line_count": 7,
+    "indicators": {
+      "email_addresses": true,
+      "phone_numbers": true,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": false,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/backup/config_backup.env",
+    "category": "configuration_backup",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 248,
+    "sha256": "a8bbc18cf4813c77dc55024843981435a8cb2ea2bfdea659c1ce8d46d5d20cd7",
+    "line_count": 6,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": false,
+      "credential_markers": true,
+      "financial_markers": true,
+      "personal_data_markers": false,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/backup/database_backup.sql",
+    "category": "database_backup",
+    "status": 200,
+    "content_type": "application/sql",
+    "bytes": 617,
+    "sha256": "d088844766eca529a92a07568632b278fbe297bbab12da1c68448cc370f8b352",
+    "line_count": 5,
+    "indicators": {
+      "email_addresses": true,
+      "phone_numbers": true,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": true,
+      "sql_data_markers": true
+    }
+  },
+  {
+    "path": "/backup/old_site_backup.txt",
+    "category": "legacy_backup",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 170,
+    "sha256": "bd642fc9264ae8904fbba27b494a0a770763963b72478366ba07632589773c5d",
+    "line_count": 4,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": false,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": false,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/internal/admin_notes.txt",
+    "category": "admin_notes",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 316,
+    "sha256": "1871adbd7c7008ee6a1f3a3c403525599fe6b0f9d45e75eb0bac041f6d800970",
+    "line_count": 4,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": false,
+      "credential_markers": true,
+      "financial_markers": false,
+      "personal_data_markers": true,
+      "sql_data_markers": false
+    }
+  },
+  {
+    "path": "/internal/dev_comments.txt",
+    "category": "developer_comments",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 248,
+    "sha256": "1988459f0a8e21e490c9fe51d3f1c5bbc08c96217a78f123f78dc2f00332c74e",
+    "line_count": 5,
+    "indicators": {
+      "email_addresses": false,
+      "phone_numbers": false,
+      "credential_markers": false,
+      "financial_markers": false,
+      "personal_data_markers": false,
+      "sql_data_markers": false
+    }
+  }
+]

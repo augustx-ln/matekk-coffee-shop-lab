@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/static-lab/documents/customer_accounts.csv",
+    "status": 200,
+    "bytes": 274,
+    "sha256": "8199c6a31c9ebdea0d2f3aa45306030bb52bc5e919c34fc6d6e9874ca2cc8e9e"
+  },
+  {
+    "path": "/static-lab/documents/customer_payment_records.csv",
+    "status": 200,
+    "bytes": 377,
+    "sha256": "1515e8e016b5fa39ce46999f9f1b04e6998c0a514fa2aef0a69905fb25096203"
+  },
+  {
+    "path": "/static-lab/backup/config_backup.env",
+    "status": 200,
+    "bytes": 248,
+    "sha256": "a8bbc18cf4813c77dc55024843981435a8cb2ea2bfdea659c1ce8d46d5d20cd7"
+  },
+  {
+    "path": "/static-lab/backup/database_backup.sql",
+    "status": 200,
+    "bytes": 617,
+    "sha256": "d088844766eca529a92a07568632b278fbe297bbab12da1c68448cc370f8b352"
+  },
+  {
+    "path": "/data/uploads/af8cd86f5a9301cfd8dc4127.bin",
+    "status": 200,
+    "bytes": 618,
+    "sha256": "eb406211a0f0b672975ec0dae2a55c5fcfe2c8dff6dc725759cb5fcbe3079553"
+  },
+  {
+    "path": "/uploads/af8cd86f5a9301cfd8dc4127.bin",
+    "status": 200,
+    "bytes": 618,
+    "sha256": "eb406211a0f0b672975ec0dae2a55c5fcfe2c8dff6dc725759cb5fcbe3079553"
+  }
+]

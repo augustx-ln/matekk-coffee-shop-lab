@@ -1,0 +1,107 @@
+[
+  {
+    "path": "/api/health",
+    "status": 200,
+    "content_type": "application/json",
+    "bytes_sampled": 49,
+    "sha256_sample": "40049d1ef89e687b57540991fb83ddf65131878fe8b66db5149b1e3d02a10c62"
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes_sampled": 618,
+    "sha256_sample": "eb406211a0f0b672975ec0dae2a55c5fcfe2c8dff6dc725759cb5fcbe3079553"
+  },
+  {
+    "path": "/api/me",
+    "status": 401,
+    "content_type": "application/json",
+    "bytes_sampled": 27,
+    "sha256_sample": "a62758cae62db6570147838870f933c551c2260d688ca93dd986511adb76b3b9"
+  },
+  {
+    "path": "/api/admin/summary",
+    "status": 401,
+    "content_type": "application/json",
+    "bytes_sampled": 27,
+    "sha256_sample": "a62758cae62db6570147838870f933c551c2260d688ca93dd986511adb76b3b9"
+  },
+  {
+    "path": "/api/admin/users",
+    "status": 401,
+    "content_type": "application/json",
+    "bytes_sampled": 27,
+    "sha256_sample": "a62758cae62db6570147838870f933c551c2260d688ca93dd986511adb76b3b9"
+  },
+  {
+    "path": "/api/admin/reviews",
+    "status": 401,
+    "content_type": "application/json",
+    "bytes_sampled": 27,
+    "sha256_sample": "a62758cae62db6570147838870f933c551c2260d688ca93dd986511adb76b3b9"
+  },
+  {
+    "path": "/api/admin/quarantine",
+    "status": 401,
+    "content_type": "application/json",
+    "bytes_sampled": 27,
+    "sha256_sample": "a62758cae62db6570147838870f933c551c2260d688ca93dd986511adb76b3b9"
+  },
+  {
+    "path": "/documents/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes_sampled": 881,
+    "sha256_sample": "abcdeb2b5f26d22f1e3fe42fd1f053309d1caaeeb40ed0cded21d7f0f8d5bf6e",
+    "links": [
+      "api_schema.json",
+      "customer_accounts.csv",
+      "customer_payment_records.csv",
+      "employee_records.csv",
+      "internal-memos.txt",
+      "owner-financial-records.txt",
+      "secret-recipes.txt",
+      "supplier-contracts.txt"
+    ]
+  },
+  {
+    "path": "/backup/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes_sampled": 402,
+    "sha256_sample": "4de0d6317195541ed2a4e42a31c1d355d7c8cc55cf31b5882b4dd912536c3e3a",
+    "links": [
+      "config_backup.env",
+      "database_backup.sql",
+      "old_site_backup.txt"
+    ]
+  },
+  {
+    "path": "/internal/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes_sampled": 309,
+    "sha256_sample": "ec7844440718ee0417d79abc7914f8673cf3d9afd61bc50aac9ece40aa9e9311",
+    "links": [
+      "admin_notes.txt",
+      "dev_comments.txt"
+    ]
+  },
+  {
+    "path": "/staff/archive",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes_sampled": 170,
+    "sha256_sample": "bd642fc9264ae8904fbba27b494a0a770763963b72478366ba07632589773c5d",
+    "body_preview": "MATEKK LEGACY SITE BACKUP - SYNTHETIC TRAINING CONTENT\nLegacy staff portal: /staff/archive\nLegacy export location: /backup/database_backup.sql\nLegacy API reference: /docs"
+  },
+  {
+    "path": "/static-lab/",
+    "status": 404,
+    "content_type": "application/json",
+    "bytes_sampled": 22,
+    "sha256_sample": "37ec4665a8102d115ffd1ac20dae94c98b4dac64b0c1a68228aa2a531caeb35d",
+    "links": []
+  }
+]

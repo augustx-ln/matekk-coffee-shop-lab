@@ -1,0 +1,241 @@
+Matekk Coffee Shop - Phase 3 Reconnaissance
+Timestamp: 2026-11-01T11:44:25+08:00
+Target: http://127.0.0.1:8000
+Scope: localhost only; non-destructive HTTP GET/HEAD enumeration
+
+=== 1. CONNECTIVITY ===
+GET / -> HTTP 200; content-type text/html; charset=utf-8; size 618
+{"ok":true,"app":"Matekk Coffee Shop","lab":true}
+=== 2. HTTP RESPONSE HEADERS ===
+HTTP/1.1 405 Method Not Allowed
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+allow: GET
+content-length: 31
+content-type: application/json
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+=== 3. TECHNOLOGY FINGERPRINT ===
+{"application":"Matekk Coffee Shop Lab","framework":"FastAPI","fastapi_version":"0.115.6","starlette_version":"0.41.3","multipart_version":"0.0.20","frontend":"React + Vite","database":"SQLite","notice":"Intentionally vulnerable localhost training target; version disclosure is deliberate."}
+=== 4. RECON FILES ===
+--- /robots.txt
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-type: text/plain; charset=utf-8
+accept-ranges: bytes
+content-length: 224
+last-modified: Sun, 01 Nov 2026 03:42:04 GMT
+etag: "13ecca09feb97c88d5472e77e0e74451"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /backup/
+Disallow: /api/admin/
+Disallow: /documents/owner-financial-records.txt
+# Legacy staff portal: /staff/archive
+# Development API reference: /docs--- /sitemap.xml
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-type: application/xml
+accept-ranges: bytes
+content-length: 340
+last-modified: Sun, 01 Nov 2026 03:42:04 GMT
+etag: "2e5b79d6299223942385fe224f61fb55"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ <url><loc>http://127.0.0.1/</loc></url><url><loc>http://127.0.0.1/menu</loc></url><url><loc>http://127.0.0.1/reviews</loc></url><url><loc>http://127.0.0.1/documents/</loc></url><url><loc>http://127.0.0.1/staff/archive</loc></url>
+</urlset>=== 5. DOCUMENTED API SURFACE (OPENAPI PATHS) ===
+OpenAPI: 3.1.0
+Title: Matekk Coffee Shop Lab
+  GET /api/admin/quarantine
+  GET /api/admin/reviews
+  PATCH /api/admin/reviews/{rid}
+  GET /api/admin/summary
+  GET /api/admin/users
+  GET /api/customers/{customer_id}/private-records
+  GET /api/health
+  POST /api/login
+  POST /api/logout
+  GET /api/me
+  GET /api/reviews
+  POST /api/reviews
+  GET /backup/
+  GET /backup/{filename}
+  GET /documents/
+  GET /documents/{filename}
+  GET /internal/
+  GET /internal/{filename}
+  GET /lab/fingerprint
+  GET /staff/archive
+  GET /{path}
+=== 6. DIRECTORY / FILE ENUMERATION ===
+--- /documents/
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-length: 881
+content-type: text/html; charset=utf-8
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+<!doctype html><html><head><title>/documents/</title></head><body><h1>Index of /documents/</h1><ul><li><a href="api_schema.json">api_schema.json</a> <small>283 bytes</small></li><li><a href="customer_accounts.csv">customer_accounts.csv</a> <small>274 bytes</small></li><li><a href="customer_payment_records.csv">customer_payment_records.csv</a> <small>377 bytes</small></li><li><a href="employee_records.csv">employee_records.csv</a> <small>239 bytes</small></li><li><a href="internal-memos.txt">internal-memos.txt</a> <small>334 bytes</small></li><li><a href="owner-financial-records.txt">owner-financial-records.txt</a> <small>423 bytes</small></li><li><a href="secret-recipes.txt">secret-recipes.txt</a> <small>395 bytes</small></li><li><a href="supplier-contracts.txt">supplier-contracts.txt</a> <small>309 bytes</small></li></ul><p>Matekk local training lab.</p></body></html>--- /backup/
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-length: 402
+content-type: text/html; charset=utf-8
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+<!doctype html><html><head><title>/backup/</title></head><body><h1>Index of /backup/</h1><ul><li><a href="config_backup.env">config_backup.env</a> <small>248 bytes</small></li><li><a href="database_backup.sql">database_backup.sql</a> <small>617 bytes</small></li><li><a href="old_site_backup.txt">old_site_backup.txt</a> <small>170 bytes</small></li></ul><p>Matekk local training lab.</p></body></html>--- /internal/
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-length: 309
+content-type: text/html; charset=utf-8
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+<!doctype html><html><head><title>/internal/</title></head><body><h1>Index of /internal/</h1><ul><li><a href="admin_notes.txt">admin_notes.txt</a> <small>316 bytes</small></li><li><a href="dev_comments.txt">dev_comments.txt</a> <small>248 bytes</small></li></ul><p>Matekk local training lab.</p></body></html>--- /staff/archive
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-type: text/plain; charset=utf-8
+accept-ranges: bytes
+content-disposition: attachment; filename="staff-archive.txt"
+content-length: 170
+last-modified: Sun, 01 Nov 2026 03:36:06 GMT
+etag: "1aa15035060974439abe7ae0d78d990d"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+MATEKK LEGACY SITE BACKUP - SYNTHETIC TRAINING CONTENT
+Legacy staff portal: /staff/archive
+Legacy export location: /backup/database_backup.sql
+Legacy API reference: /docs=== 7. SELECTED PUBLIC FILE METADATA ===
+--- /documents/customer_payment_records.csv
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-type: text/csv; charset=utf-8
+accept-ranges: bytes
+content-disposition: attachment; filename="customer_payment_records.csv"
+content-length: 377
+last-modified: Sun, 01 Nov 2026 03:36:06 GMT
+etag: "477827dc5379ea25960af12f87f28d14"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+--- /documents/customer_accounts.csv
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-type: text/csv; charset=utf-8
+accept-ranges: bytes
+content-disposition: attachment; filename="customer_accounts.csv"
+content-length: 274
+last-modified: Sun, 01 Nov 2026 03:36:06 GMT
+etag: "1cdca03511e6c25c82151844ed41d637"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+--- /backup/config_backup.env
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:25 GMT
+server: uvicorn
+content-type: text/plain; charset=utf-8
+accept-ranges: bytes
+content-disposition: attachment; filename="config_backup.env"
+content-length: 248
+last-modified: Sun, 01 Nov 2026 03:36:06 GMT
+etag: "2b3c27a49005f062202c5bfee289625f"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+--- /backup/database_backup.sql
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:26 GMT
+server: uvicorn
+content-type: application/sql
+accept-ranges: bytes
+content-disposition: attachment; filename="database_backup.sql"
+content-length: 617
+last-modified: Sun, 01 Nov 2026 03:36:06 GMT
+etag: "c4a6af2113853f4b1fdb50975a1fd617"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+--- /internal/admin_notes.txt
+HTTP/1.1 200 OK
+date: Sun, 01 Nov 2026 03:44:26 GMT
+server: uvicorn
+content-type: text/plain; charset=utf-8
+accept-ranges: bytes
+content-disposition: attachment; filename="admin_notes.txt"
+content-length: 316
+last-modified: Sun, 01 Nov 2026 03:36:06 GMT
+etag: "d196f440e338673a96b9ef19d81c27cc"
+x-powered-by: Matekk-Lab/1.0 (FastAPI; Starlette)
+x-matekk-stack: React; Vite; FastAPI; Starlette; SQLite
+
+=== 8. STATIC FRONTEND ASSETS ===
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="theme-color" content="#241b15"/><title>Matekk Coffee Shop</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">  <script type="module" crossorigin src="/assets/index-DvIWlEz7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C7klGFij.css">
+</head><body><div id="root"></div></body></html>=== 9. ROUTE STATUS MATRIX ===
+/api/health                                      200
+/lab/fingerprint                                 200
+/docs                                            200
+/openapi.json                                    200
+/api/me                                          401
+/api/admin/summary                               401
+/api/admin/users                                 401
+/api/customers/1001/private-records              401
+/documents/                                      200
+/backup/                                         200
+/internal/                                       200
+/staff/archive                                   200
+/nonexistent-phase3-probe                        200
+=== 10. LOCAL LISTENER ===
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      2048       127.0.0.1:8000      0.0.0.0:*    users:(("uvicorn",pid=11465,fd=13))
+
+Saved reconnaissance output: /home/agustx/Projects/Matekk-Coffee-Shop/phase3-recon.txt
+
+=== 11. TCP SERVICE IDENTIFICATION ===
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-11-01 11:44 +0800
+Nmap scan report for 127.0.0.1
+Host is up (0.00072s latency).
+
+PORT     STATE SERVICE VERSION
+8000/tcp open  http    Uvicorn
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.73 seconds
+
+=== 12. DOCUMENT LIST COUNTS ===
+documents: 8
+backup: 3
+internal: 2
+
+=== 13. ROBOTS AND SITEMAP ROUTE CLUES ===
+public/robots.txt:Disallow: /admin/
+public/robots.txt:Disallow: /internal/
+public/robots.txt:Disallow: /backup/
+public/robots.txt:Disallow: /api/admin/
+public/robots.txt:Disallow: /documents/owner-financial-records.txt
+public/robots.txt:# Legacy staff portal: /staff/archive
+public/robots.txt:# Development API reference: /docs
+public/sitemap.xml: <url><loc>http://127.0.0.1/</loc></url><url><loc>http://127.0.0.1/menu</loc></url><url><loc>http://127.0.0.1/reviews</loc></url><url><loc>http://127.0.0.1/documents/</loc></url><url><loc>http://127.0.0.1/staff/archive</loc></url>
+
+=== 14. GIT WORKTREE (RECON OUTPUT IS LOCAL ONLY) ===
+?? phase3-recon.txt

@@ -1,0 +1,15 @@
+{
+  "phase": 4,
+  "status": "baseline_prepared",
+  "target": "http://127.0.0.1:8000",
+  "scope": "localhost-only",
+  "tests": [
+    "authenticated_idor",
+    "customer_to_admin_authorization",
+    "admin_authorization",
+    "upload_validation",
+    "session_behavior",
+    "dependency_applicability"
+  ],
+  "attack_tests_started": false
+}

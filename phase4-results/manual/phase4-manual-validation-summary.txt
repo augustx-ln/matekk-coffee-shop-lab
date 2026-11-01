@@ -1,0 +1,33 @@
+Matekk Coffee Shop — Phase 4 Manual Validation Summary
+Date recorded: 2026-11-01
+Source: user-provided manual terminal transcript in the conversation. Raw credentials and bearer tokens intentionally excluded.
+
+1. Authentication baseline
+- Customer Jhon login succeeded.
+- GET /api/me returned HTTP 200 and role=customer.
+- Admin Sally login succeeded.
+
+2. Authorization / IDOR
+- Customer token accessed /api/customers/1001/private-records: HTTP 200; synthetic record Amara Reyes returned.
+- Same customer token accessed /api/customers/1002/private-records: HTTP 200; synthetic record Noah Santos returned.
+- Same customer token accessed /api/customers/1003/private-records: HTTP 200; synthetic record Mika Flores returned.
+- Finding: authenticated customer can retrieve private records for all three customer IDs; endpoint lacks an ownership check. Confirmed behaviorally.
+
+3. Admin role boundary
+- Customer requests to /api/admin/summary, /api/admin/users, and /api/admin/reviews returned HTTP 403.
+- Admin requests to /api/admin/summary, /api/admin/users, and /api/admin/quarantine returned HTTP 200.
+- Finding: tested customer-to-admin boundary behaved as intended.
+
+4. Upload MIME validation
+- An inert plain-text file was submitted with client-supplied Content-Type image/png.
+- POST /api/reviews returned HTTP 200 and {"ok":true}.
+- The file appeared in admin quarantine as review_id=3 with scan_status="NOT SCANNED - LAB DEMO".
+- Finding: server trusts client-supplied MIME type and does not validate file signature. The file remained quarantined as an opaque .bin; no execution was tested or observed.
+
+5. Database and evidence follow-up
+- Pre-upload counts in the supplied transcript: users=2, customer_private_records=3, reviews=2.
+- Post-test database integrity and counts were independently checked on the Kali host on 2026-11-01: integrity_check=ok; users=2; customer_private_records=3; reviews=3.
+- Logout endpoint behavior and token reuse after logout were not tested in the supplied transcript.
+- Session invalidation will be performed by restarting the Uvicorn process because sessions are held in process memory. This is not a behavioral test of the logout endpoint.
+
+Security note: the supplied transcript contained bearer tokens and demo passwords. They are not reproduced here. Restarting the server clears the in-memory sessions; credentials should be rotated if they are reused outside this isolated lab.

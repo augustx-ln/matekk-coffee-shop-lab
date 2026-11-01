@@ -1,0 +1,62 @@
+[
+  {
+    "method": "GET",
+    "raw_path": "/documents/%2e%2e%2fbackup%2fconfig_backup.env",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "cors_origin": null,
+    "cors_methods": null,
+    "body_bytes": 248,
+    "body_sha256": "a8bbc18cf4813c77dc55024843981435a8cb2ea2bfdea659c1ce8d46d5d20cd7"
+  },
+  {
+    "method": "GET",
+    "raw_path": "/documents/%2e%2e%2f..%2fbackend%2fmain.py",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "cors_origin": null,
+    "cors_methods": null,
+    "body_bytes": 618,
+    "body_sha256": "eb406211a0f0b672975ec0dae2a55c5fcfe2c8dff6dc725759cb5fcbe3079553"
+  },
+  {
+    "method": "GET",
+    "raw_path": "/documents/%2e%2e%2f..%2f..%2fetc%2fpasswd",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "cors_origin": null,
+    "cors_methods": null,
+    "body_bytes": 618,
+    "body_sha256": "eb406211a0f0b672975ec0dae2a55c5fcfe2c8dff6dc725759cb5fcbe3079553"
+  },
+  {
+    "method": "GET",
+    "raw_path": "/static-lab/%2e%2e%2f..%2fbackend%2fmain.py",
+    "status": 404,
+    "content_type": "application/json",
+    "cors_origin": null,
+    "cors_methods": null,
+    "body_bytes": 22,
+    "body_sha256": "37ec4665a8102d115ffd1ac20dae94c98b4dac64b0c1a68228aa2a531caeb35d"
+  },
+  {
+    "method": "OPTIONS",
+    "raw_path": "/api/login",
+    "status": 400,
+    "content_type": "text/plain; charset=utf-8",
+    "cors_origin": null,
+    "cors_methods": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT",
+    "body_bytes": 22,
+    "body_sha256": "f80399859bbd7b2cb1cac34d88e0f01461619f351b476926e2465eea789098d4"
+  },
+  {
+    "method": "OPTIONS",
+    "raw_path": "/api/login",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "cors_origin": "http://localhost",
+    "cors_methods": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT",
+    "body_bytes": 2,
+    "body_sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+  }
+]
